@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdarg.h>
+#include <stdint.h>
+
 
 /**
  * _get_printer - checks for a registered printer for a given specifier
