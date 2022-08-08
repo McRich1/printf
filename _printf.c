@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdarg.h>
+#include <stdint.h>
 
 /**
  * _printf - can print anything
