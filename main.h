@@ -1,48 +1,26 @@
-#include <unistd.h>
-#include <stdlib.h>
+#ifndef MAIN_H
+#define MAIN_H
+
 #include <stdarg.h>
-
-/* utils.c *77/
-int _strlen(const char *);
-int print(char *);
-char *itoa(long int, int);
-
-/* printf.c */
-int _printf(const char *, ...);
-
-/* handler.c */
-int handler(const char *, va_list);
-int percent_handler(const char *, va_list, int *);
-
-/* printers */
-int print_string(va_list);
-int print_char(va_list);
-int print_integer(va_list);
-int print_binary(va_list);
-int print_rot(va_list);
-int print_unsigned(va_list);
-int print_octal(va_list);
-int print_hexadecimal_low(va_list);
-int print_hexadecimal_upp(va_list);
-int print_pointer(va_list);
-int print_rev_string(va_list);
-
-/* _putchar.c */
-int _putchar(char);
-int buffer(char);
+#include <stdlib.h>
 
 /**
- * struct _format - Typedef struct
- *
- * @type: Format
- * @f: The function associated
- **/
-typedef struct _format
+ * struct printer - structure for printing to stdout,and given a specifier to struct
+ * @specifier: the specifier recognized by this printer (without the %)
+ * @run: the function to run when this printer is invoked
+ */
+typedef struct printer
 {
-        char type;
-        int (*f)(va_list);
-} format;
+	char *specifier;
+	int (*run)(va_list);
+} printer;
 
+printer _get_printer(const char *specifier);
+int _putchar(char c);
+int _printf(const char *format, ...);
+int _print_char(va_list);
+int _print_str(va_list);
+int _print_decimal(va_list);
+int _print_int(va_list);
 
-#endif
-
+#endif /* MAIN_H */
