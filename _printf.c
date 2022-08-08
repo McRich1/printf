@@ -1,11 +1,10 @@
-#include "main.h'
-
+#include "main.h"
 
 /**
- * _printf - can print anything
+ * _printf - prints anything
  * @format: the format string
  *
- * Return:  number of characters printed
+ * Return: the number of characters printed
  */
 int _printf(const char *format, ...)
 {
