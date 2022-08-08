@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _print_decimal - prints a decimal number 
+ * _print_decimal - prints a decimal number
  * @args: list of arguments
  *
  * Return: number of chars printed
