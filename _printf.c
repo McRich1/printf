@@ -1,4 +1,5 @@
 #include "main.h"
+<<<<<<< HEAD
 
 void cleanup(va_list args, buffer_t *output);
 int run_printf(const char *format, va_list args, buffer_t *output);
@@ -23,6 +24,14 @@ void cleanup(va_list args, buffer_t *output)
  * @args: A va_list of arguments.
  *
  * Return: The number of characters stored to output.
+=======
+
+/**
+ * _printf - prints anything
+ * @format: the format string
+ *
+ * Return: the number of characters printed
+>>>>>>> 5c4d1ad1557c4f225f56d4d5380daf525d89f432
  */
 int run_printf(const char *format, va_list args, buffer_t *output)
 {
